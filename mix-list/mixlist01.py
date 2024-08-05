@@ -16,3 +16,17 @@ iplist = [ 5060, "80", 55, "10.0.0.1", "10.20.30.1", "ssh" ]
 
 print("IP addresses: " + iplist[3] + " ," + iplist[4])
 
+wordbank= ["indentation", "spaces"]
+
+
+tlgstudents= ['Albert', 'Anthony', 'Brenden', 'Craig', 'Deja', 'Elihu', 'Eric', 'Giovanni', 'James', 'Joshua', 'Maria', 'Mohamed', 'PJ', 'Philip', 'Sagan', 'Suchit', 'Meka', 'Trey', 'Winton', 'Xiuxiang', 'Yaping']
+
+wordback.append(4)
+
+num = input("choose a number between 1 and 20")
+
+num = int(num)
+
+name = tlgstudents[num - 1]
+
+print(f"{name} always uses {wordbank[1]} {wordbank[2]} to indent.")
