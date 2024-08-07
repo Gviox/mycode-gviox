@@ -18,18 +18,27 @@ def quiz_questions(questions):
     #display question
     for question in questions:
         print(question["question"])
+        print("Enter a number that cooresponds with your answer.")
 
     #display all choices
         for index, choice in enumerate(question["choices"], 1):
             print(f"{index}.{choice['text']}")
 
-    #account for user input 
-        user_input = int(input("Choose your answer: ")) - 1
-        selected_choice = question["choices"][user_input]
-        answers.append(user_input + 1)# append the selected number instead of text
+    #account for user input
+        while True:
+            try:
+                 user_input = int(input("Choose your answer: ")) - 1
+                 if 0 <= user_input < len(question["choices"]):
+                     selected_choice = question["choices"][user_input]
+                     answers.append(user_input + 1)# append the selected number instead of text
 
-    # count the character associated with the selected choice
-        character_counts.update(selected_choice["characters"])
+                     # count the character associated with the selected choice
+                     character_counts.update(selected_choice["characters"])
+                     break
+                 else:
+                     print("Invalid choice. Please choose a number from the list")
+            except ValueError:
+                print("Invalid input. Please enter a number.")
 
     #increment through the questions by one
         question_num += 1
