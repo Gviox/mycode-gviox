@@ -17,8 +17,8 @@ def quiz_questions(questions):
 
     #display question
     for question in questions:
-        print(question["question"])
         print("Enter a number that cooresponds with your answer.")
+        print(question["question"])
 
     #display all choices
         for index, choice in enumerate(question["choices"], 1):
