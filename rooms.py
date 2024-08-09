@@ -47,7 +47,7 @@ rooms = {
         }
     },
    'Living Room': {
-        'description': "You enter a large room with a locked door to the north. You can feel electricity in the air. They hallway is to the west.",
+        'description': "You enter a large room with a door that looks like an exit! You can feel electricity in the air. They hallway is to the west.",
         'exits': {'north': 'Exit', 'west' : 'Hallway'},
         'items': [],
         'locked': True,
